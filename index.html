@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdaanXAI</title>
+    <meta name="description"
+        content="Deploying elite AI agents for business. Scale, Automate, and Launch the future of enterprise operations with UdaanXAI.">
+    <link rel="icon" type="image/png" href="logo-white.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Three.js for Celestial Background -->
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div id="loader">
+        <div class="loader-planet-wrap">
+            <div class="loader-planet"></div>
+            <div class="loader-planet-orbit">
+                <div class="loader-moon"></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <div class="nav-wrap" id="navbar">
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#faq">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger" id="ham">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-cta">
+                <a href="#contact" class="btn-git">Get in touch</a>
+            </div>
+        </nav>
+    </div>
+    <div class="mob-menu" id="mob">
+        <a href="#services">Services</a>
+        <a href="#faq">Pricing</a>
+        <a href="#contact">Contact</a>
+        <div class="mob-cta">
+            <a href="#contact" class="btn-git">Get in touch</a>
+        </div>
+    </div>
+
+    <div id="content-wrapper">
+        <main>
+
+            <!-- HERO -->
+            <section class="hero" id="home">
+                <div class="hero-mesh"></div>
+                <div class="hero-content rv">
+                    <div class="hero-logo-box">
+                        <svg class="hero-logo futuristic-rocket" viewBox="0 0 60 100" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur stdDeviation="2" result="glow" />
+                                    <feMerge>
+                                        <feMergeNode in="glow" />
+                                        <feMergeNode in="glow" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <linearGradient id="bodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="100%" stop-color="#e2e8f0" />
+                                </linearGradient>
+                                <linearGradient id="finGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                    <stop offset="0%" stop-color="#f1f5f9" />
+                                    <stop offset="100%" stop-color="#cbd5e1" />
+                                </linearGradient>
+                            </defs>
+                            <g filter="url(#logoGlow)">
+                                <path
+                                    d="M30 4 C30 4 42 15 42 35 L42 65 C42 70 38 75 30 78 C22 75 18 70 18 65 L18 35 C18 15 30 4 30 4 Z"
+                                    fill="url(#bodyGrad)" />
+                                <path d="M18 50 C14 55 8 65 4 80 L12 78 C14 70 16 62 18 58 Z" fill="url(#finGrad)" />
+                                <path d="M42 50 C46 55 52 65 56 80 L48 78 C46 70 44 62 42 58 Z" fill="url(#finGrad)" />
+                                <path d="M26 75 L30 92 L34 75" fill="url(#finGrad)" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h1>UDAANXAI</h1>
+
+                    <div class="hero-roller-wrap">
+                        <span class="we-text">We</span>
+                        <div class="roller-container">
+                            <div class="roller">
+                                <span class="roll-item">Scale</span>
+                                <span class="roll-item">Automate</span>
+                                <span class="roll-item">Design</span>
+                                <span class="roll-item">Launch</span>
+                                <span class="roll-item">Scale</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-btns-centered">
+                        <a href="#contact" class="btn-p">Scale My Business <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg></a>
+                        <a href="#services" class="btn-s">Transform My Brand <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg></a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <!-- SERVICES -->
+            <section class="sec svc-sec" id="services">
+                <div class="sec-inner" style="gap:40px">
+                    <div class="sec-hdr rv">
+                        <div class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v4l2 2" />
+                            </svg>SERVICES</div>
+                        <h2 class="sec-title">Smarter Services, <em
+                                style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Built
+                                with
+                                AI</em></h2>
+                        <p class="sec-sub">Everything you need to automate operations, boost productivity</p>
+                    </div>
+
+                    <!-- Row 1: Task Tracker + AI Orb -->
+                    <div class="svc-row rv">
+                        <div class="svc-card" id="automation">
+                            <div class="svc-card-visual">
+                                <div class="task-tracker">
+                                    <div class="task-tracker-inner">
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                </svg></div>Employee Tracking<div class="task-status"><svg
+                                                    class="refresh" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 2v6h-6" />
+                                                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item highlighted">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <path d="M12 6v6l4 2" />
+                                                </svg></div>Payment reminder<div class="task-status"><svg
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M20 6L9 17l-5-5" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <path d="M12 8v4" />
+                                                    <path d="M12 16h.01" />
+                                                </svg></div>Cost Management
+                                            <div class="task-status"><svg class="refresh" viewBox="0 0 24 24"
+                                                    fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 2v6h-6" />
+                                                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                    <path d="M3 9h18" />
+                                                </svg></div>Social media post<div class="task-status"><svg
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M20 6L9 17l-5-5" />
+                                                </svg></div>
+                                        </div>
+                                        <!-- Duplicate for seamless loop -->
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                </svg></div>Employee Tracking<div class="task-status"><svg
+                                                    class="refresh" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 2v6h-6" />
+                                                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item highlighted">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <path d="M12 6v6l4 2" />
+                                                </svg></div>Payment reminder<div class="task-status"><svg
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M20 6L9 17l-5-5" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <path d="M12 8v4" />
+                                                    <path d="M12 16h.01" />
+                                                </svg></div>Cost Management
+                                            <div class="task-status"><svg class="refresh" viewBox="0 0 24 24"
+                                                    fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 2v6h-6" />
+                                                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                    <path d="M3 9h18" />
+                                                </svg></div>Social media post<div class="task-status"><svg
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M20 6L9 17l-5-5" />
+                                                </svg></div>
+                                        </div>
+                                        <!-- Duplicated for seamless scroll -->
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                                    <polyline points="7 10 12 15 17 10" />
+                                                    <line x1="12" y1="15" x2="12" y2="3" />
+                                                </svg></div>Employee Tracking<div class="task-status"><svg
+                                                    class="refresh" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M23 4v6h-6" />
+                                                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <path d="M12 8v4" />
+                                                    <path d="M12 16h.01" />
+                                                </svg></div>Cost Management
+                                            <div class="task-status"><svg class="refresh" viewBox="0 0 24 24"
+                                                    fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 2v6h-6" />
+                                                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="task-item">
+                                            <div class="task-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                    <path d="M3 9h18" />
+                                                </svg></div>Social media post<div class="task-status"><svg
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path d="M20 6L9 17l-5-5" />
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="svc-card-info">
+                                <h3>Automate repetitive tasks</h3>
+                                <p>We help you streamline internal operations by automating manual workflows</p>
+                            </div>
+                        </div>
+                        <div class="svc-card wide">
+                            <div class="svc-card-visual">
+                                <div class="orb-container">
+                                    <div class="float-icon fi-2"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 8v4l2 2" />
+                                        </svg></div>
+                                    <div class="float-icon fi-3"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                            <path d="m22 6-10 7L2 6" />
+                                        </svg></div>
+                                    <div class="float-icon fi-4"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                        </svg></div>
+                                    <div class="ai-orb">
+                                        <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            style="width: 70px; height: 42px;">
+                                            <!-- Node connections -->
+                                            <path d="M25 30H35" stroke="rgba(255,255,255,0.7)" stroke-width="6"
+                                                stroke-linecap="round" />
+                                            <path d="M55 30H65C70 30 70 15 75 15H85" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" stroke-linecap="round" />
+                                            <path d="M55 30H65C70 30 70 45 75 45H85" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" stroke-linecap="round" />
+
+                                            <!-- Node circles -->
+                                            <circle cx="15" cy="30" r="8" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" fill="none" />
+                                            <circle cx="45" cy="30" r="8" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" fill="none" />
+                                            <circle cx="85" cy="15" r="8" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" fill="none" />
+                                            <circle cx="85" cy="45" r="8" stroke="rgba(255,255,255,0.7)"
+                                                stroke-width="6" fill="none" />
+                                        </svg>
+                                    </div>
+                                    <div class="neural-lines">
+                                        <div class="neural-line nl-1" style="--r:45deg"></div>
+                                        <div class="neural-line nl-2" style="--r:135deg"></div>
+                                        <div class="neural-line nl-3" style="--r:225deg"></div>
+                                        <div class="neural-line nl-4" style="--r:315deg"></div>
+                                    </div>
+                                    <div class="float-icon fi-5"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                                            <path d="M3 9h18" />
+                                            <path d="M9 21V9" />
+                                        </svg></div>
+                                    <div class="float-icon fi-6"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                            <path d="M2 17l10 5 10-5" />
+                                            <path d="M2 12l10 5 10-5" />
+                                        </svg></div>
+                                    <div class="float-icon fi-7"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path
+                                                d="M4 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4zm0 8a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div class="svc-card-info">
+                                <h3>Automated Workflows</h3>
+                                <p>Boost efficiency across teams with smart automation Build intelligent workflows that
+                                    automate multi-step processes across tools and platforms</p>
+                            </div>
+                        </div>
+                    </div><!-- Row 2: Search UI + Code Editor + Node Graph -->
+                    <div class="svc-row rv rv-d1">
+                        <div class="svc-card">
+                            <div class="svc-card-visual">
+                                <div class="search-ui">
+                                    <div class="search-bar">
+                                        <div class="scrolling-placeholder" id="searchPlaceholder">
+                                            <div class="placeholder-text active">Software & App Industry</div>
+                                            <div class="placeholder-text">High Converting Customer</div>
+                                            <div class="placeholder-text">Automate repetetive tasks</div>
+                                        </div>
+                                        <div class="search-btn">Research</div>
+                                    </div>
+                                    <div class="search-results-container">
+                                        <div class="search-result">
+                                            <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                </svg></div>Software & App Industry<span class="sr-arrow">↗</span>
+                                        </div>
+                                        <div class="search-result">
+                                            <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                </svg></div>UX & UI Design Industry<span class="sr-arrow">↗</span>
+                                        </div>
+                                        <div class="search-result">
+                                            <div class="sr-icon"><svg viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                                    <circle cx="9" cy="7" r="4" />
+                                                </svg></div>High Converting Customer<span class="sr-arrow">↗</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="svc-card-info">
+                                <h3>Real-Time Intelligence</h3>
+                                <p>Make smarter decisions with live data insights Tap into real-time data</p>
+                            </div>
+                        </div>
+                        <div class="svc-card">
+                            <div class="svc-card-visual">
+                                <div class="code-editor">
+                                    <div class="code-titlebar"><span class="code-dot r"></span><span
+                                            class="code-dot y"></span><span class="code-dot g"></span>
+                                        <div class="code-tabs"><span>🔍</span><span>Code &lt;/&gt;</span></div>
+                                    </div>
+                                    <div class="code-body">
+                                        <div class="code-line"><span class="code-num">1</span><span
+                                                class="code-text"><span class="kw">class</span> <span
+                                                    class="fn">AutomationAgent</span>:</span>
+                                        </div>
+                                        <div class="code-line"><span class="code-num">2</span><span
+                                                class="code-text">&nbsp;&nbsp;<span class="kw">def</span> <span
+                                                    class="fn">__init__</span>(<span class="self">self</span>,
+                                                activation_limit):</span></div>
+                                        <div class="code-line"><span class="code-num">3</span><span
+                                                class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    class="self">self</span>.activation_limit
+                                                =</span></div>
+                                        <div class="code-line"><span class="code-num">4</span><span
+                                                class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;activation_limit</span>
+                                        </div>
+                                        <div class="code-line"><span class="code-num">5</span><span
+                                                class="code-text">&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                    class="self">self</span>.current_mode =
+                                                <span class="str">"idle"</span></span></div>
+                                        <div class="code-line"><span class="code-num">6</span><span
+                                                class="code-text"></span>
+                                        </div>
+                                        <div class="code-line"><span class="code-num">7</span><span
+                                                class="code-text">&nbsp;&nbsp;<span class="kw">def</span> <span
+                                                    class="fn">evaluate_task</span>(<span class="self">self</span>,
+                                                workload_value):</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="svc-card-info">
+                                <h3>Custom AI Agent development</h3>
+                                <p>We develop custom AI agents that integrate seamlessly with your tools</p>
+                            </div>
+                        </div>
+                        <div class="svc-card">
+                            <div class="svc-card-visual">
+                                <div class="node-graph">
+                                    <div class="node-dot nd-1"></div>
+                                    <div class="node-dot nd-2"></div>
+                                    <div class="node-dot nd-3"></div>
+                                    <div class="node-dot nd-4"></div>
+                                    <div class="node-dot nd-5"></div>
+                                    <div class="node-dot nd-6"></div>
+                                    <div class="node-dot node-center"><svg viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5L12 3z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div class="svc-card-info">
+                                <h3>AI Strategy Consulting</h3>
+                                <p>Get expert guidance to implement AI solutions that drive business growth</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- FEATURE BLOCKS -->
+            <section class="sec" style="padding:60px 0">
+                <div class="feat-blocks">
+                    <div class="feat-row rv">
+                        <div class="feat-text">
+                            <div class="pill-tag">Custom Projects</div>
+                            <h3>Custom AI Solutions</h3>
+                            <p>We design and develop bespoke artificial intelligence solutions tailored to your unique
+                                challenges. Every model is built from scratch to align with your goals and deliver
+                                measurable impact.</p>
+                            <div class="feat-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>Tailored to your specific business needs</div>
+                            <div class="feat-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>Built with scalable architecture</div>
+                        </div>
+                        <div class="feat-img">
+                            <div class="perf-dash"
+                                style="padding:25px; background:rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.08); border-radius:24px; position:relative; overflow:hidden; backdrop-filter: blur(20px); height:320px">
+
+
+
+                                <div style="position:relative; z-index:10">
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px">
+                                        <div style="display:flex; align-items:center; gap:10px">
+                                            <div
+                                                style="width:28px; height:28px; border-radius:50%; background:linear-gradient(45deg, var(--accent), #fff); padding:2px">
+                                                <div
+                                                    style="width:100%; height:100%; border-radius:50%; background:#000; overflow:hidden">
+                                                    <img src="favicon-optimized.png"
+                                                        style="width:100%; height:100%; object-fit:cover" alt="AI">
+                                                </div>
+                                            </div>
+                                            <span class="system-status-pulse"
+                                                style="font-size:14px; font-weight:600; color:#fff">System Status:
+                                                Active</span>
+                                        </div>
+                                        <div
+                                            style="padding:4px 10px; background:rgba(0, 157, 255, 0.1); border:1px solid rgba(0, 157, 255, 0.2); border-radius:20px; font-size:10px; color:var(--accent); font-weight:600">
+                                            PRODUCTION</div>
+                                    </div>
+
+                                    <div
+                                        style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:16px; margin-bottom:15px; backdrop-filter: blur(5px)">
+                                        <div
+                                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+                                            <span style="font-size:12px; color:rgba(255,255,255,0.8)">Enterprise
+                                                Deployment</span>
+                                            <span style="font-size:11px; color:var(--accent)">98% Optimized</span>
+                                        </div>
+                                        <div
+                                            style="width:100%; height:6px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden">
+                                            <div
+                                                style="width:98%; height:100%; background:linear-gradient(90deg, var(--accent), #fff); box-shadow: 0 0 15px var(--accent); transition: width 1s ease-in-out">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="perf-metrics" style="display:grid; gap:10px">
+                                        <div
+                                            style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:12px">
+                                            <div style="font-size:9px; color:rgba(255,255,255,0.4); margin-bottom:4px">
+                                                Latency</div>
+                                            <div class="latency-val"
+                                                style="font-size:16px; font-weight:700; color:#fff"></div>
+                                        </div>
+                                        <div
+                                            style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:12px; padding:12px">
+                                            <div style="font-size:9px; color:rgba(255,255,255,0.4); margin-bottom:4px">
+                                                Scalability</div>
+                                            <div class="scalability-val"
+                                                style="font-size:16px; font-weight:700; color:#fff">100%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 2: Voice Agents (Alternating: Image Left, Text Right) -->
+                    <div class="feat-row rv" style="flex-direction: row-reverse" id="voice-ai">
+                        <!-- Text on Right -->
+                        <div class="feat-text">
+                            <div class="pill-tag">AI Assistant</div>
+                            <h3 style="font-size: clamp(24px, 2.5vw, 35px); margin-bottom: 15px">Voice Agents</h3>
+                            <p>Human-like AI voice responses that automate support and lead generation. Works 24/7 to
+                                ensure
+                                your business never misses an opportunity.</p>
+                            <div style="display:flex; gap:12px; margin-top: 10px">
+                                <div class="btn-feat">Voice agents</div>
+                                <div class="btn-feat">Many more</div>
+                            </div>
+                        </div>
+                        <!-- Card on Left -->
+                        <div class="feat-img">
+                            <div class="voice-ui"
+                                style="padding:30px; width:100%; height:100%; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:space-between; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08)">
+
+                                <div style="text-align:center; z-index:10">
+                                    <div style="font-size:18px; font-weight:600; color:#fff; margin-bottom:6px">What can
+                                        I help
+                                        with?</div>
+                                    <div style="font-size:12px; color:rgba(255,255,255,0.5); line-height:1.4">Whether
+                                        you want
+                                        help in customer handling or make <br> changes in your system just give me
+                                        command</div>
+                                </div>
+
+                                <div style="display:flex; align-items:center; justify-content:center; flex:1">
+                                    <div class="waveform-visualizer" style="height: 40px">
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1s ease-in-out infinite 0.1s">
+                                        </div>
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1.2s ease-in-out infinite 0.3s">
+                                        </div>
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1s ease-in-out infinite 0.5s">
+                                        </div>
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1.4s ease-in-out infinite 0.2s">
+                                        </div>
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1.2s ease-in-out infinite 0.4s">
+                                        </div>
+                                        <div class="wave-bar"
+                                            style="width: 5px; background: #fff; animation: wavePulse 1s ease-in-out infinite 0.6s">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style="width:100%; max-width:320px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px; z-index:10">
+                                    <div style="display:flex; justify-content:space-between; align-items:center">
+                                        <div style="font-size:12px; color:rgba(255,255,255,0.8)">Provide me full report
+                                            |</div>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" style="color:var(--accent)">
+                                            <path d="m22 2-7 20-4-9-9-4Z" />
+                                            <path d="M22 2 11 13" />
+                                        </svg>
+                                    </div>
+                                    <div style="display:flex; gap:8px; margin-top:10px">
+                                        <div
+                                            style="padding:4px 10px; border-radius:6px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); font-size:9px; color:rgba(255,255,255,0.6); cursor:pointer">
+                                            + Add document</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feat-row rv" id="ai-filmmaking">
+                        <div class="feat-text">
+                            <div class="pill-tag">FilmMaking</div>
+                            <h2 class="sec-title" style="text-align:left;margin-bottom:15px">AI -Filmmaking</h2>
+                            <p style="margin-bottom:20px; color:rgba(255,255,255,0.7); line-height:1.6">Create
+                                cinematic,
+                                story-driven AI videos for brands, products, and ideas. From concept to final output, we
+                                focus on narrative, not just visuals.</p>
+                            <div style="display:flex; gap:12px; flex-wrap:wrap">
+                                <div class="btn-feat">AI- Ads</div>
+                                <div class="btn-feat">AI-Music Videos</div>
+                                <div class="btn-feat">AI- UGC Content</div>
+                                <div class="btn-feat">AI- Music Video</div>
+                            </div>
+                        </div>
+                        <div class="feat-img">
+                            <div class="film-studio-card">
+                                <!-- Cinematic gradient canvas -->
+                                <div class="film-canvas">
+                                    <div class="film-grain"></div>
+                                    <div class="film-light-ray film-ray-1"></div>
+                                    <div class="film-light-ray film-ray-2"></div>
+                                    <div class="film-light-ray film-ray-3"></div>
+                                    <!-- Floating film icons -->
+                                    <div class="film-float-icon film-icon-1">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path d="M23 7l-7 5 7 5V7z" />
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                                        </svg>
+                                    </div>
+                                    <div class="film-float-icon film-icon-2">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <polygon points="23 7 16 12 23 17 23 7" />
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                                            <line x1="6" y1="1" x2="6" y2="5" />
+                                            <line x1="10" y1="1" x2="10" y2="5" />
+                                        </svg>
+                                    </div>
+                                    <div class="film-float-icon film-icon-3">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <polygon points="10 8 16 12 10 16 10 8" />
+                                        </svg>
+                                    </div>
+                                    <div class="film-float-icon film-icon-4">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                                            <line x1="7" y1="2" x2="7" y2="22" />
+                                            <line x1="17" y1="2" x2="17" y2="22" />
+                                            <line x1="2" y1="12" x2="22" y2="12" />
+                                            <line x1="2" y1="7" x2="7" y2="7" />
+                                            <line x1="2" y1="17" x2="7" y2="17" />
+                                            <line x1="17" y1="7" x2="22" y2="7" />
+                                            <line x1="17" y1="17" x2="22" y2="17" />
+                                        </svg>
+                                    </div>
+                                    <!-- Center render status -->
+                                    <div class="film-render-status">
+                                        <div class="film-render-ring">
+                                            <svg viewBox="0 0 80 80" class="film-ring-svg">
+                                                <circle cx="40" cy="40" r="34" stroke="rgba(255,255,255,0.08)"
+                                                    stroke-width="3" fill="none" />
+                                                <circle cx="40" cy="40" r="34" stroke="url(#renderGrad)"
+                                                    stroke-width="3" fill="none" stroke-dasharray="213.6"
+                                                    stroke-dashoffset="213.6" stroke-linecap="round"
+                                                    class="film-ring-progress" />
+                                                <defs>
+                                                    <linearGradient id="renderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                        <stop offset="0%" stop-color="#3b82f6" />
+                                                        <stop offset="100%" stop-color="#ffffff" />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <div class="film-render-percent">100%</div>
+                                        </div>
+                                        <div class="film-ready-badge">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                            Your Film is Ready
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Editing timeline -->
+                                <div class="film-strip-texture"></div>
+                                <div class="film-timeline">
+                                    <div class="film-timeline-tracks">
+                                        <div class="film-track film-track-v">
+                                            <span class="film-track-label">V1</span>
+                                            <div class="film-track-clips">
+                                                <div class="film-clip film-clip-1"></div>
+                                                <div class="film-clip film-clip-2"></div>
+                                                <div class="film-clip film-clip-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="film-track film-track-a">
+                                            <span class="film-track-label">A1</span>
+                                            <div class="film-track-clips">
+                                                <div class="film-clip-audio"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="film-playhead"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feat-row rv" style="flex-direction:row-reverse" id="ai-agents">
+                        <div class="feat-text">
+                            <div class="pill-tag">Sales & Marketing</div>
+                            <h2 class="sec-title" style="text-align:left;margin-bottom:15px">AI Agents</h2>
+                            <p style="margin-bottom:20px; color:rgba(255,255,255,0.7); line-height:1.6">Design smart
+                                agents
+                                that automate tasks, answer questions, and support workflows. Built to reduce effort,
+                                save
+                                time, and scale operations.</p>
+                        </div>
+                        <div class="feat-img">
+                            <div class="agent-terminal"
+                                style="background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.05); border-radius:15px; padding:20px; width:100%; max-width:380px; position:relative; overflow:hidden;">
+                                <div class="term-header"
+                                    style="display:flex; align-items:center; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:10px;">
+                                    <div style="display:flex; gap:6px;">
+                                        <div
+                                            style="width:10px; height:10px; border-radius:50%; background:rgba(255,60,60,0.5);">
+                                        </div>
+                                        <div
+                                            style="width:10px; height:10px; border-radius:50%; background:rgba(255,190,40,0.5);">
+                                        </div>
+                                        <div
+                                            style="width:10px; height:10px; border-radius:50%; background:rgba(40,200,60,0.5);">
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="font-family: var(--font-m), monospace; font-size:12px; color:rgba(255,255,255,0.4); margin-left:15px;">
+                                        agent_exec_01.sh</div>
+                                </div>
+                                <div class="term-body"
+                                    style="font-family: var(--font-m), monospace; font-size:13px; line-height:1.8; color:rgba(255,255,255,0.7);">
+                                    <div class="t-line l1">> Connecting to CRM... <span
+                                            style="color:#28c83c">[OK]</span></div>
+                                    <div class="t-line l2">> Analyzing 1,204 leads... <span
+                                            style="color:#28c83c">[DONE]</span></div>
+                                    <div class="t-line l3">> Drafting personalized outreach...</div>
+                                    <div class="t-line l4">> Sending emails... <span class="blink"
+                                            style="color:#009dff">_</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- AI FILMMAKING VIDEO SECTION -->
+            <section class="sec film-sec">
+                <div class="divider-soft" style="position:absolute;top:0;left:0;right:0;z-index:1"></div>
+                <div class="film-hdr rv">
+                    <div class="film-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="m15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                        <span>AI-Filmmaking</span>
+                    </div>
+                    <h2 class="film-title">Create <em
+                            style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">stunning</em>
+                        visuals with AI</h2>
+                    <p class="film-sub">Transform your creative vision into reality with our AI-powered filmmaking
+                        platform.
+                        Generate professional-grade content including ads, music videos, and UGC at a fraction of the
+                        traditional cost and time.</p>
+                </div>
+                <div class="film-video rv rv-d1">
+                    <video autoplay muted loop playsinline>
+                        <source src="vid.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section><!-- BENEFITS -->
+            <section class="sec ben-sec" id="benefits">
+                <div class="sec-inner" style="gap:60px;align-items:center">
+                    <div class="sec-hdr rv" style="max-width:800px">
+                        <div class="tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                            </svg>
+                            Benefits
+                        </div>
+                        <h2 class="sec-title">The Key Benefits of AI for Your Business Growth</h2>
+                        <p class="sec-sub">Discover how AI-powered solutions can transform your operations, reduce
+                            costs,
+                            and accelerate your business growth with measurable results.</p>
+                    </div>
+                    <div class="ben-grid"
+                        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; width:100%; margin-top:40px">
+                        <div class="ben-card rv"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Increased Productivity</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">Automate repetitive tasks and free
+                                up
+                                your team to focus on high-value work that drives real business growth.</p>
+                        </div>
+                        <div class="ben-card rv rv-d1"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Time Efficiency</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">Reduce processing time by up to 80%
+                                with
+                                intelligent automation that works around the clock without breaks.</p>
+                        </div>
+                        <div class="ben-card rv rv-d2"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M16 8l-4 4-2-2" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Cost Reduction</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">Lower operational costs through
+                                smart
+                                automation while maintaining quality and improving output consistency.</p>
+                        </div>
+                        <div class="ben-card rv"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Data-Driven Insights</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">Leverage advanced analytics to
+                                uncover
+                                patterns, predict trends, and make informed decisions with confidence.</p>
+                        </div>
+                        <div class="ben-card rv rv-d1"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Enhanced Security</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">AI-powered threat detection and
+                                response
+                                systems that protect your business data and customer information 24/7.</p>
+                        </div>
+                        <div class="ben-card rv rv-d2"
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:15px; padding:30px; display:flex; flex-direction:column; gap:15px; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px)">
+                            <div class="ben-icon"
+                                style="width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.05); display:flex; align-items:center; justify-content:center; color:var(--accent)">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h4 style="font-size:18px; font-weight:600">Scalable Growth</h4>
+                            <p style="font-size:14px; opacity:0.6; line-height:1.6">Scale your operations seamlessly
+                                with AI
+                                systems that grow alongside your business without proportional cost increases.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOUNDERS -->
+            <section class="sec" id="founders">
+                <div class="sec-inner">
+                    <div class="sec-hdr rv">
+                        <div class="tag">VISIONARIES</div>
+                        <h2 class="sec-title">Meet the Founders</h2>
+                        <p class="sec-sub">The minds behind the AI evolution.</p>
+                    </div>
+                    <div class="svc-row rv" style="margin-top:40px; justify-content:center; gap:30px">
+                        <!-- Bharat Singh -->
+                        <div class="svc-card founder-card"
+                            style="min-height:auto; padding:40px; text-align:center; flex:0 1 400px">
+                            <div class="orb-container" style="min-height:160px; margin-bottom:20px">
+                                <div class="founder-avatar-wrap">
+                                    <div class="founder-avatar">
+                                        <img src="bharat_portrait_oversized.png" alt="Bharat Singh"
+                                            onerror="this.src='bharat_premium.png'">
+                                        <div class="holographic-glint"></div>
+                                    </div>
+                                    <div class="neural-rings">
+                                        <div class="neural-ring ring-1"></div>
+                                        <div class="neural-ring ring-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 style="font-size:24px; margin-bottom:5px">Bharat Singh</h3>
+                            <p
+                                style="color:var(--accent); font-weight:600; font-size:14px; margin-bottom:5px; text-transform:uppercase; letter-spacing:1px">
+                                Founder</p>
+                            <div class="email-wrap">
+                                <p style="font-size:13px; color:rgba(255,255,255,0.5); margin:0">udaanxai@gmail.com</p>
+                                <button class="copy-btn" onclick="copyToClipboard('udaanxai@gmail.com', this)"
+                                    title="Copy Email">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:20px">
+                                Seamless
+                                operations head & future-ready AI solutions builder.</p>
+                            <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap">
+                                <a href="https://www.instagram.com/bharatx1st/" target="_blank"
+                                    class="founder-social-link">Instagram</a>
+                                <a href="https://www.linkedin.com/in/bharatsinghofficial/" target="_blank"
+                                    class="founder-social-link">LinkedIn</a>
+                            </div>
+                        </div><!-- Krishna Sharma -->
+                        <div class="svc-card founder-card"
+                            style="min-height:auto; padding:40px; text-align:center; flex:0 1 400px">
+                            <div class="orb-container" style="min-height:160px; margin-bottom:20px">
+                                <div class="founder-avatar-wrap">
+                                    <div class="founder-avatar">
+                                        <img src="krishna_portrait_oversized.png" alt="Krishna Sharma"
+                                            onerror="this.src='krishna_original.jpg'">
+                                        <div class="holographic-glint"></div>
+                                    </div>
+                                    <div class="neural-rings">
+                                        <div class="neural-ring ring-1"></div>
+                                        <div class="neural-ring ring-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 style="font-size:24px; margin-bottom:5px">Krishna Sharma</h3>
+                            <p
+                                style="color:var(--accent); font-weight:600; font-size:14px; margin-bottom:5px; text-transform:uppercase; letter-spacing:1px">
+                                Co-Founder</p>
+                            <div class="email-wrap">
+                                <p style="font-size:13px; color:rgba(255,255,255,0.5); margin:0">rajkrisharma@gmail.com
+                                </p>
+                                <button class="copy-btn" onclick="copyToClipboard('rajkrisharma@gmail.com', this)"
+                                    title="Copy Email">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:20px">
+                                Growth-targeted leader & strategic expansion specialist.</p>
+                            <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap">
+                                <a href="https://www.instagram.com/rajkrisharma/" target="_blank"
+                                    class="founder-social-link">Instagram</a>
+                                <a href="https://www.linkedin.com/in/rajkrisharma/" target="_blank"
+                                    class="founder-social-link">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="sec" id="faq">
+                <div class="faq-glow-l"></div>
+                <div class="faq-glow-r"></div>
+                <div class="sec-inner">
+                    <div class="sec-hdr rv" style="text-align:center">
+                        <h2 class="sec-title" style="font-size: clamp(32px, 5vw, 48px);">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="faq-list rv"
+                        style="margin-top:60px; max-width:900px; margin-left:auto; margin-right:auto">
+                        <div class="faq-item">
+                            <div class="faq-q">What is the pricing? <span class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">The pricing varies according to complexities of the project. Please
+                                contact the team for a proper estimate.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">How do AI agents integrate with my existing business tools? <span
+                                    class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">Our agents are built with high compatibility in mind, connecting
+                                seamlessly via API to your CRM, email platforms (like HubSpot or Salesforce), and custom
+                                enterprise databases.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Can your AI Voice Agents handle complex customer inquiries? <span
+                                    class="faq-plus">+</span></div>
+                            <div class="faq-a">Yes. We build intelligent voice systems using advanced LLMs that can
+                                handle natural conversations, manage complex objections, and process live scheduling—far
+                                beyond the capabilities of simple fixed scripts.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">What is the typical turnaround for AI Filmmaking? <span
+                                    class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">Depending on complexity, a 30-60 second high-quality cinematic ad or
+                                music video typically takes 3 to 7 days from initial concept to final render.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">How secure is my business data? <span class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">We prioritize enterprise-grade security. All data processed by our custom
+                                models is encrypted, and we offer private deployment options to ensure your sensitive
+                                information never leaves your secure environment.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">How do your custom agents differ from generic tools like ChatGPT? <span
+                                    class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">While ChatGPT is a fantastic general tool, our agents are fine-tuned on
+                                your specific business data, strictly adhere to your brand voice, and are integrated
+                                directly with your operational tools to perform actual tasks.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Do I need a technical team to manage the AI after deployment? <span
+                                    class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">No. We design our solutions to be high-performance yet low-maintenance.
+                                We provide intuitive dashboards for monitoring and handle the underlying infrastructure
+                                so you can focus on growth.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Can these AI agents scale with my business volume? <span
+                                    class="faq-plus">+</span></div>
+                            <div class="faq-a">Absolutely. Unlike human teams, AI agents can handle a 10x surge in
+                                volume instantly without any decrease in performance or increase in proportional
+                                operational costs.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-q">Do you provide support and updates after launch? <span
+                                    class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-a">Yes. We provide ongoing maintenance and performance optimization to
+                                ensure your agents stay up-to-date with the latest AI model improvements and continue to
+                                deliver peak ROI.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- CONTACT -->
+            <section class="sec" id="contact" style="padding-top:0">
+                <div class="sec-inner">
+                    <div class="svc-card contact-card rv">
+                        <div class="contact-hdr">
+                            <h2 class="sec-title">Let's <em
+                                    style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">Connect</em>
+                            </h2>
+                            <p class="sec-sub">Direct line to our leadership team.</p>
+                        </div>
+
+                        <form id="contact-form" class="contact-grid">
+                            <div class="form-group">
+                                <label for="name">Name <span>*</span></label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span>*</span></label>
+                                <input type="email" id="email" placeholder="john@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-number">WhatsApp Number</label>
+                                <input type="tel" id="contact-number" placeholder="98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City <span>*</span></label>
+                                <input type="text" id="city" placeholder="New York" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" placeholder="Future Unicorn Inc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile</label>
+                                <input type="text" id="linkedin" placeholder="linkedin.com/in/johndoe">
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" id="whatsapp-btn" class="btn-p">
+                                    Launch via WhatsApp
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="sec-inner" style="padding:0 40px">
+                    <div class="footer-grid">
+                        <div class="footer-brand">
+                            <div class="footer-logo-row">
+                                <img src="logo-white.png" alt="UdaanXAI Logo" class="footer-logo">
+                                <h3>UdaanXAI</h3>
+                            </div>
+                            <p>Elite AI Automation Agency. Deploying elite AI agents for businesses. Scaling,
+                                Automating,
+                                Designing, and Launching the future of enterprise operations.</p>
+                        </div>
+                        <div class="footer-col">
+                            <h4 class="footer-title">Products</h4>
+                            <a href="#ai-agents">AI Agents</a>
+                            <a href="#voice-ai">Voice AI</a>
+                            <a href="#ai-filmmaking">AI Filmmaking</a>
+                            <a href="#automation">Automation</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4 class="footer-title">Company</h4>
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4 class="footer-title">Socials</h4>
+                            <a href="https://www.youtube.com/@rajkrisharma" target="_blank" rel="noopener">YouTube</a>
+                            <a href="https://www.instagram.com/bharatx1st/" target="_blank" rel="noopener">Instagram</a>
+                            <a href="https://www.linkedin.com/in/bharatsinghofficial/" target="_blank"
+                                rel="noopener">LinkedIn</a>
+                            <a href="https://x.com/rajkrisharma" target="_blank" rel="noopener">X (Twitter)</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 UdaanXAI. All rights reserved.</p>
+                        <p
+                            style="margin-top:10px; opacity:0.6; font-size:12px; max-width:600px; margin-left:auto; margin-right:auto">
+                            UdaanXAI is a premier AI automation agency dedicated to scaling enterprises through
+                            cutting-edge
+                            intelligent systems. We specialize in deploying elite AI agents that redefine operational
+                            efficiency and creative excellence.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

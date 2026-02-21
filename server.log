@@ -1,0 +1,114 @@
+::1 - - [20/Feb/2026 03:36:25] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:36:25] "GET /favicon-optimized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:36:25] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:36:25] "GET /logo-white.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:36:25] "GET /script.js HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:36:25] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET /favicon-optimized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET /logo-white.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET /script.js HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:39:22] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 03:45:32] code 404, message File not found
+::1 - - [20/Feb/2026 03:45:32] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 03:45:32] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 03:45:41] code 404, message File not found
+::1 - - [20/Feb/2026 03:45:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 04:01:04] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 04:01:05] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 04:13:05] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 04:34:36] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 04:34:36] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 04:42:29] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 05:34:32] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 05:34:32] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 05:34:32] "GET /script.js HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 05:35:00] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 05:35:00] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 06:04:48] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:04:48] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:04:48] "GET /favicon-optimized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:04:48] "GET /logo-white.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:04:48] "GET /script.js HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:04:48] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:23:08] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:23:08] "GET /bharat_premium.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:23:08] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:23:08] "GET /krishna_premium.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:37:02] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:37:02] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 06:37:02] "GET /bharat_premium.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 06:37:02] "GET /krishna_premium.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 12:52:04] "GET /vid.mp4 HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 12:58:25] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 12:58:25] code 404, message File not found
+::1 - - [20/Feb/2026 12:58:25] "GET /bharat_plain_premium.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 12:58:25] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 12:58:25] "GET /favicon-optimized.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 12:58:25] code 404, message File not found
+::1 - - [20/Feb/2026 12:58:25] "GET /krishna_plain_premium.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 12:58:25] "GET /logo-white.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 12:58:25] "GET /script.js HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 12:58:26] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 12:58:28] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 13:08:43] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 13:08:44] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:08:44] "GET /krishna_premium.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:08:44] "GET /bharat_premium.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:09:20] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:12:40] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:12:40] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 13:14:19] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:14:19] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:14:23] code 404, message File not found
+::1 - - [20/Feb/2026 13:14:23] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 13:25:27] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 13:25:27] code 404, message File not found
+::1 - - [20/Feb/2026 13:25:27] "GET /bharat_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 13:25:27] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 13:25:27] code 404, message File not found
+::1 - - [20/Feb/2026 13:25:27] "GET /krishna_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:23:31] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 14:23:31] code 404, message File not found
+::1 - - [20/Feb/2026 14:23:31] code 404, message File not found
+::1 - - [20/Feb/2026 14:23:31] "GET /bharat_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:23:31] "GET /krishna_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:23:31] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 14:27:11] code 404, message File not found
+::1 - - [20/Feb/2026 14:27:11] "GET /bharat_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:27:11] code 404, message File not found
+::1 - - [20/Feb/2026 14:27:11] "GET /krishna_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:31:59] code 404, message File not found
+::1 - - [20/Feb/2026 14:31:59] "HEAD /bharat_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:31:59] code 404, message File not found
+::1 - - [20/Feb/2026 14:31:59] "HEAD /krishna_portrait_final.png HTTP/1.1" 404 -
+::1 - - [20/Feb/2026 14:31:59] "HEAD /bharat_subject_top_quality.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 14:31:59] "HEAD /krishna_subject_top_quality.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 14:32:22] "GET /krishna_subject_top_quality.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 14:32:22] "GET /bharat_subject_top_quality.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:19:53] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:19:53] "GET /bharat_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:19:53] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:19:53] "GET /krishna_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:19:53] "GET /script.js HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:23:29] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:23:29] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:23:29] "GET /bharat_portrait_oversized.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:23:29] "GET /krishna_portrait_oversized.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:27:34] "GET / HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:27:39] "GET /bharat_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:27:39] "GET /favicon-optimized.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:27:40] "GET /styles.css HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:27:40] "GET /krishna_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:27:40] "GET /logo-white.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:27:40] "GET /script.js HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:27:42] "GET /vid.mp4 HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:34:17] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:34:22] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:34:22] "GET /krishna_portrait_oversized.png HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:34:22] "GET /bharat_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:36:17] "GET / HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:36:20] "GET /bharat_portrait_oversized.png HTTP/1.1" 200 -
+::1 - - [20/Feb/2026 15:36:20] "GET /styles.css HTTP/1.1" 304 -
+::1 - - [20/Feb/2026 15:36:20] "GET /krishna_portrait_oversized.png HTTP/1.1" 304 -
